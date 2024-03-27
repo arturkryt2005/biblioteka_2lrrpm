@@ -8,10 +8,13 @@ namespace biblioteka_2lrrpm
     public partial class Menu : ContentPage 
     {
         public char theme;
+        public string LoginWalk, PassWalk;
 
-        public Menu(char theme)
+        public Menu(char theme, string LoginWalk, string PassWalk)
         {
             this.theme = theme;
+            this.LoginWalk = LoginWalk;
+            this.PassWalk = PassWalk;
 
             InitializeComponent();
 
@@ -27,7 +30,7 @@ namespace biblioteka_2lrrpm
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            Profile page = new Profile(theme);
+            Profile page = new Profile(theme, LoginWalk, PassWalk);
             await Navigation.PushAsync(page);
         }
 
