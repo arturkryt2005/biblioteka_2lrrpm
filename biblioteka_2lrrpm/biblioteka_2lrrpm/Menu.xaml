@@ -2,12 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="biblioteka_2lrrpm.Menu"
-             Title="Главная">  
+             Title="Главная">
     <ContentPage.Content>
         <StackLayout Margin="45,45,45,0">
             <Button HeightRequest="80" Margin="0,0,0,10" Text="Личный кабинет" FontSize="15" Clicked="Button_Clicked" CornerRadius="10" BorderColor="Black"/>
             <Button HeightRequest="80" Margin="0,0,0,10" Text="Книги" FontSize="15" Clicked="Button_Clicked_1" CornerRadius="10" BorderColor="Black"/>
             <Button HeightRequest="80" Text="Выход" FontSize="15" Clicked="Ex" CornerRadius="10" BorderColor="Black"/>
+
+            <StackLayout Orientation="Horizontal" Margin="10,20" HorizontalOptions="Center">
+                <Button Text="Тема" Clicked="OnThemeToggleClicked" CornerRadius="10" BorderColor="Black"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
