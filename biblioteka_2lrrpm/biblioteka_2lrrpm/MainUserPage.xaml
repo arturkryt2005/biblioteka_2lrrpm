@@ -1,12 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="biblioteka_2lrrpm.MainUserPage"
              Title="Пользователи">
     <StackLayout>
-        <StackLayout Orientation="Horizontal" Margin="10,20" HorizontalOptions="Center">
-            <Button CornerRadius="10" HorizontalOptions="Center" WidthRequest="300" Text="Добавить" FontSize="13" Clicked="Button_Clicked" />
-        </StackLayout>
+
+        <Button Text="Добавить" Clicked="Button_Clicked" BackgroundColor="#007AFF" TextColor="White" CornerRadius="10" Margin="10,20,10,0" />
         <ListView x:Name="userlist" ItemsSource="{Binding}" ItemSelected="userlist_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>

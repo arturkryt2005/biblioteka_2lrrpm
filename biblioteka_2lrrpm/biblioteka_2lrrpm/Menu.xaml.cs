@@ -7,7 +7,6 @@ namespace biblioteka_2lrrpm
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Menu : ContentPage 
     {
-
         public char theme;
 
         public Menu(char theme)

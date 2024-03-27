@@ -10,9 +10,9 @@
                     <Image Source="https://chudo-prirody.com/uploads/posts/2021-08/1628637234_114-p-tri-kota-foto-123.jpg" WidthRequest="120" HeightRequest="120" x:Name="img"/>
                 </Frame>
                 <StackLayout Orientation="Vertical" Margin="40,0,0,0">
-                    <Button WidthRequest="120" HeightRequest="40" Text="Сделать фото" FontSize="11" Clicked="TakePhotoAsync"/>
-                    <Button WidthRequest="120" HeightRequest="40" Text="Выбрать фото" FontSize="11" Clicked="GetPhotoAsync"/>
-                    <Button WidthRequest="120" HeightRequest="40" Text="Выход" FontSize="11" Clicked="Ex"/>
+                    <Button HeightRequest="50" Text="Сделать фото" FontSize="11" Clicked="TakePhotoAsync" CornerRadius="10" BorderColor="Black"/>
+                    <Button HeightRequest="50" Text="Выбрать фото" FontSize="11" Clicked="GetPhotoAsync" CornerRadius="10" BorderColor="Black"/>
+                    <Button HeightRequest="50" Text="Выход" FontSize="11" Clicked="Ex" CornerRadius="10" BorderColor="Black"/>
                 </StackLayout>
             </StackLayout>
             <Label Text="Имя: Егор/Артур/Денис" Margin="20,20,0,0" FontSize="16" TextColor="WhiteSmoke"/>
