@@ -10,12 +10,15 @@ namespace biblioteka_2lrrpm
     public partial class Profile : ContentPage
     {
         public char theme;
+        public string LoginWalk, PassWalk;
 
-        public Profile(char theme)
+        public Profile(char theme, string LoginWalk, string PassWalk)
         {
             InitializeComponent();
 
             this.theme = theme;
+            this.LoginWalk = LoginWalk;
+            this.PassWalk = PassWalk;
 
             if (theme == 'w')
             {
@@ -72,6 +75,16 @@ namespace biblioteka_2lrrpm
         {
             MainPage page = new MainPage(theme);
             await Navigation.PushAsync(page);
+        }
+
+        public string LoginReturn(object sender, EventArgs e)
+        {
+            return this.LoginWalk;
+        }
+
+        public string PasswordReturn(object sender, EventArgs e)
+        {
+            return this.PassWalk;
         }
     }
 

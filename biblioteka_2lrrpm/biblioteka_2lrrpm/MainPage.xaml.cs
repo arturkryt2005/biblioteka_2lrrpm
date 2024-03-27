@@ -6,6 +6,7 @@ namespace biblioteka_2lrrpm
     public partial class MainPage : ContentPage
     {
         public char theme;
+        public string LoginWalk, PassWalk;
 
         public MainPage(char theme)
         {
@@ -69,6 +70,9 @@ namespace biblioteka_2lrrpm
                 string login = Log.Text;
                 string password = Pas.Text;
 
+                this.LoginWalk = login;
+                this.PassWalk = password;
+
                 if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
                 {
                     await DisplayAlert("Ошибка", "Введите логин и пароль", "OK");
@@ -76,7 +80,7 @@ namespace biblioteka_2lrrpm
                 }
                 if (Pick.SelectedIndex == 0)
                 {
-                    Menu page = new Menu(theme);
+                    Menu page = new Menu(theme, LoginWalk, PassWalk);
                     await Navigation.PushAsync(page);
                 }
                 if (Pick.SelectedIndex == 1)
