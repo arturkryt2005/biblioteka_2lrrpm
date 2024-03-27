@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="biblioteka_2lrrpm.MainBookPage"
              Title="Книги">
-    <StackLayout Margin="0,30,0,30" HorizontalOptions="Center">
+    
+    <StackLayout Margin="0,30,0,0" HorizontalOptions="Center">
         <ListView x:Name="filesList" ItemSelected="FileSelect" HeightRequest="10">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -15,12 +16,19 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <StackLayout Orientation="Horizontal" Margin="0,0,0,5">
-            <Entry x:Name="fileNameEntry" HorizontalOptions="FillAndExpand" Placeholder="Введите название книги"/>
-            <Button Text="Сохранить" Clicked="Save" TextTransform="None"/>
-        </StackLayout>
-        <Editor x:Name="textEditor" HeightRequest="40" Placeholder="Введите автора книги" Margin="0,0,0,120"/>
-        <Button HorizontalOptions="Center" WidthRequest="150" Text="Назад" FontSize="13" Clicked="Ex"/>
+        
+        <Frame CornerRadius="10" BorderColor="{StaticResource LightFrameColor}" Padding="0" Margin="10" BackgroundColor="{StaticResource LightBackgroundColor}">
+            <Entry x:Name="fileNameEntry" Placeholder="Название" PlaceholderColor="Black" TextColor="Black"/>
+        </Frame>
+        
+        <Frame CornerRadius="10" BorderColor="{StaticResource LightFrameColor}" Padding="0" Margin="10" BackgroundColor="{StaticResource LightBackgroundColor}">
+            <Entry x:Name="textEditor" Placeholder="Автор" PlaceholderColor="Black" TextColor="Black"/>
+        </Frame>
+
+        <Button Text="Сохранить" HeightRequest="60" CornerRadius="10" Margin="10 10 35 10" Clicked="Save" FontSize="18" TextTransform="None"/>
+
+        <Button HorizontalOptions="Center" CornerRadius="10" WidthRequest="150" Margin="0 0 70 0" Text="Назад" FontSize="13" Clicked="Ex"/>
     </StackLayout>
+    
 </ContentPage>
 
