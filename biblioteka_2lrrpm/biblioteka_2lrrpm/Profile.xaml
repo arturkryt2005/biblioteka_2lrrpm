@@ -7,7 +7,7 @@
         <StackLayout Margin="0,30,0,0" >
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Frame CornerRadius="100" Padding="0" HorizontalOptions="Start" VerticalOptions="Center" IsClippedToBounds="True">
-                    <Image Source="C:\Users\khafi\Desktop\kot.png" BackgroundColor="Blue" WidthRequest="120" HeightRequest="120" x:Name="img"/>
+                    <Image Source="https://chudo-prirody.com/uploads/posts/2021-08/1628637234_114-p-tri-kota-foto-123.jpg" WidthRequest="120" HeightRequest="120" x:Name="img"/>
                 </Frame>
                 <StackLayout Orientation="Vertical" Margin="40,0,0,0">
                     <Button WidthRequest="120" HeightRequest="40" Text="Сделать фото" FontSize="11" Clicked="TakePhotoAsync"/>
