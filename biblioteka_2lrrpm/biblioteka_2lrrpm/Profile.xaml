@@ -15,8 +15,8 @@
                     <Button WidthRequest="120" HeightRequest="40" Text="Выход" FontSize="11" Clicked="Ex"/>
                 </StackLayout>
             </StackLayout>
-            <Label Text="Имя: Алина" Margin="20,20,0,0" FontSize="16" TextColor="Black"/>
-            <Label Text="Фамилия: Хафизова" Margin="20,0,0,0" FontSize="16" TextColor="Black"/>
+            <Label Text="Имя: Егор/Артур/Денис" Margin="20,20,0,0" FontSize="16" TextColor="WhiteSmoke"/>
+            <Label Text="Фамилия: Карунас/Бакасов/Балашов" Margin="20,0,0,0" FontSize="16" TextColor="WhiteSmoke"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
