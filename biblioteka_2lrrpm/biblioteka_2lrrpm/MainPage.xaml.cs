@@ -1,16 +1,26 @@
 ﻿using System;
 using Xamarin.Forms;
 
-
 namespace biblioteka_2lrrpm
 {
     public partial class MainPage : ContentPage
     {
         public char theme;
 
+        public MainPage(char theme)
+
         public MainPage()
         {
             InitializeComponent();
+
+            if (theme == 'w')
+            {
+                this.BackgroundColor = Color.Pink;
+            }
+            else if (theme == 'b')
+            {
+                this.BackgroundColor = Color.Black;
+            }
         }
         private void OnRoleSelectedIndexChanged(object sender, EventArgs e)
         {
@@ -73,12 +83,12 @@ namespace biblioteka_2lrrpm
             }
             if (Pick.SelectedIndex == 1)
             {
-                Menu1 page = new Menu1();
+                Menu1 page = new Menu1(theme);
                 await Navigation.PushAsync(page);
             }
             if (Pick.SelectedIndex == 2)
             {
-                Menu2 page = new Menu2();
+                Menu2 page = new Menu2(theme);
                 await Navigation.PushAsync(page);
             }
 

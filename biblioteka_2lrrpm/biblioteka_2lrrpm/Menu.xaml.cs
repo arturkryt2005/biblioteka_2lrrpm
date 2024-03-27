@@ -7,8 +7,13 @@ namespace biblioteka_2lrrpm
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Menu : ContentPage 
     {
+
+        public char theme;
+
         public Menu(char theme)
         {
+            this.theme = theme;
+
             InitializeComponent();
 
             if (theme == 'w')
@@ -23,18 +28,18 @@ namespace biblioteka_2lrrpm
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            Profile page = new Profile();
+            Profile page = new Profile(theme);
             await Navigation.PushAsync(page);
         }
 
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
-            UserBooks page = new UserBooks();
+            UserBooks page = new UserBooks(theme);
             await Navigation.PushAsync(page);
         }
         async void Ex(object sender, EventArgs e)
         {
-            MainPage page = new MainPage();
+            MainPage page = new MainPage(theme);
             await Navigation.PushAsync(page);
         }
 

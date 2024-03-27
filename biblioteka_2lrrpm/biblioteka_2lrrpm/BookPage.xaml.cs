@@ -12,9 +12,11 @@ namespace biblioteka_2lrrpm
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BookPage : ContentPage
     {
+        public char theme;
+
         bool edited = true; // флаг редактирования
         public Book Book { get; set; }
-        public BookPage(Book book)
+        public BookPage(Book book, char theme)
         {
             InitializeComponent();
 
@@ -25,6 +27,17 @@ namespace biblioteka_2lrrpm
                 edited = false;
             }
             this.BindingContext = Book;
+
+            this.theme = theme;
+
+            if (theme == 'w')
+            {
+                this.BackgroundColor = Color.Pink;
+            }
+            else if (theme == 'b')
+            {
+                this.BackgroundColor = Color.Black;
+            }
         }
 
         async void SaveBook(object sender, EventArgs e)
