@@ -4,18 +4,14 @@
              x:Class="biblioteka_2lrrpm.Menu2"
              Title="Главная">
     <ContentPage.Content>
-        <StackLayout Margin="0,45,0,0">
-
+        <StackLayout Margin="0,45,0,3">
             <StackLayout Orientation="Horizontal" Margin="10,20" HorizontalOptions="Center">
                 <Button CornerRadius="10" HorizontalOptions="Center" WidthRequest="300" Text="Пользователи" FontSize="13" Clicked="Button_Clicked" />
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal" Margin="10,5" HorizontalOptions="Center">
-                <Button CornerRadius="10" HorizontalOptions="Center" WidthRequest="150" Text="Выход" FontSize="13" Clicked="Ex"/>
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal" Margin="10,20" HorizontalOptions="Center">
-                <Button Text="Тема" Clicked="OnThemeToggleClicked2" CornerRadius="10" BorderColor="Black"/>
+            <StackLayout Orientation="Horizontal" Margin="10,0">
+                <Button CornerRadius="10" HorizontalOptions="StartAndExpand" Text="Выход" FontSize="13" Clicked="Ex"/>
+                <Button CornerRadius="10" HorizontalOptions="EndAndExpand" Text="Тема" Clicked="OnThemeToggleClicked2"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
