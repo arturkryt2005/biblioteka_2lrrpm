@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="biblioteka_2lrrpm.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Светлая тема -->
+            <Color x:Key="LightBackgroundColor">#FFEFEFEF</Color>
+            <Color x:Key="LightFrameColor">#FFCCCCCC</Color>
+
+            <!-- Темная тема -->
+            <Color x:Key="DarkBackgroundColor">#FF333333</Color>
+            <Color x:Key="DarkFrameColor">#FF555555</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

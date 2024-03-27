@@ -1,0 +1,41 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="biblioteka_2lrrpm.MainPage"
+             Title="ВХОД">
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Frame CornerRadius="10" BorderColor="{StaticResource LightFrameColor}" Padding="0" Margin="10" BackgroundColor="{StaticResource LightBackgroundColor}">
+            <Entry Placeholder="Логин" x:Name="Log" MaxLength="10" BackgroundColor="Gray"/>
+        </Frame>
+
+        <Frame CornerRadius="10" BorderColor="{StaticResource LightFrameColor}" Padding="0" Margin="10" BackgroundColor="{StaticResource LightBackgroundColor}">
+            <Entry Placeholder="Пароль" x:Name="Pas" IsPassword="True" MaxLength="80" BackgroundColor="Gray"/>
+        </Frame>
+
+        <Label Text="Выберите дату" x:Name="DateLabel" HorizontalOptions="Center"/>
+        <Frame CornerRadius="10" BorderColor="Black" Padding="0" BackgroundColor="White" Margin="10" WidthRequest="150" HorizontalOptions="Center">
+            <DatePicker x:Name="BirthDatePicker" DateSelected="OnSecondBirthDateSelected" HorizontalOptions="Center"/>
+        </Frame>
+        <Label x:Name="SelectedDateLabel" Text="" Margin="10" HorizontalOptions="Center"/>
+
+        <Label Text="Выберите роль" x:Name="Rol" HorizontalOptions="Center"/>
+        <Frame CornerRadius="10" BorderColor="Black" Padding="0" BackgroundColor="White" Margin="10" WidthRequest="150" HorizontalOptions="Center">
+            <Picker x:Name="Pick" BackgroundColor="Transparent" SelectedIndexChanged="OnRoleSelectedIndexChanged" WidthRequest="150" HorizontalOptions="Center" FontSize="12">
+                <Picker.Items>
+                    <x:String>Пользователь</x:String>
+                    <x:String>Библиотекарь</x:String>
+                    <x:String>Администратор</x:String>
+                </Picker.Items>
+            </Picker>
+        </Frame>
+
+        <Label x:Name="SelectedRoleLabel" Text="" Margin="10" HorizontalOptions="Center"/>
+
+        <StackLayout Orientation="Horizontal" Margin="10,20" HorizontalOptions="Center">
+            <Button WidthRequest="150" Text="Войти" FontSize="13" Clicked="Button_Clicked" CornerRadius="10" BorderColor="Black"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="10,20" HorizontalOptions="Center">
+            <Button Text="Тема" Clicked="OnThemeToggleClicked" CornerRadius="10" BorderColor="Black"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

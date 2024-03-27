@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="biblioteka_2lrrpm.Book1"
+             Title="451 градус по Фаренгейту">
+    <ContentPage.Content>
+        <StackLayout Margin="10,30,10,0">
+            <Label Text="451 градус по Фаренгейту" FontSize="18" TextColor="Black"/>
+            <Label Text="Роман Брэдбери" FontSize="16"/>
+            <Label Text="Сюжет:" FontSize="16" Margin="0,20,0,0" TextColor="Black"/>
+            <Label Text=" Сюжет романа описывает американское общество близкого будущего, в котором книги находятся под запретом. Главный герой Гай Монтэг — пожарный, задача которого сжигать любые найденные книги.
+В ходе романа Монтэг разочаровывается в идеалах общества, становится изгоем и присоединяется к небольшой подпольной группе маргиналов, сторонники которой заучивают тексты книг, чтобы спасти их для потомков." FontSize="16" TextColor="Black"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
