@@ -1,24 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using static Xamarin.Essentials.Permissions;
 
 namespace biblioteka_2lrrpm
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainBookPage : ContentPage
     {
+        public char theme;
+
         string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-        public MainBookPage()
+        public MainBookPage(char theme)
         {
             InitializeComponent();
+
+            this.theme = theme;
+
+            if (theme == 'w')
+            {
+                this.BackgroundColor = Color.Pink;
+            }
+            else if (theme == 'b')
+            {
+                this.BackgroundColor = Color.Black;
+            }
         }
 
         protected override void OnAppearing()
@@ -75,7 +82,7 @@ namespace biblioteka_2lrrpm
         }
         async void Ex(object sender, EventArgs e)
         {
-            Menu1 page = new Menu1();
+            Menu1 page = new Menu1(theme);
             await Navigation.PushAsync(page);
         }
     }

@@ -8,9 +8,11 @@ namespace biblioteka_2lrrpm
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainUserPage : ContentPage
     {
+        public char theme;
+
         protected internal ObservableCollection <User> Users { get; set; }
         public User User { get; set; }
-        public MainUserPage()
+        public MainUserPage(char theme)
         {
             InitializeComponent();
             Users = new ObservableCollection<User>
@@ -18,6 +20,17 @@ namespace biblioteka_2lrrpm
                 new User {Login="artur", Password="bakasov"},
             };
             userlist.BindingContext = Users;
+
+            this.theme = theme;
+
+            if (theme == 'w')
+            {
+                this.BackgroundColor = Color.Pink;
+            }
+            else if (theme == 'b')
+            {
+                this.BackgroundColor = Color.Black;
+            }
         }
 
         private async void userlist_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -42,7 +55,7 @@ namespace biblioteka_2lrrpm
         }
         async void Ex(object sender, EventArgs e)
         {
-            MainPage page = new MainPage();
+            MainPage page = new MainPage(theme);
             await Navigation.PushAsync(page);
         }
     }
