@@ -4,25 +4,27 @@
              x:Class="biblioteka_2lrrpm.MainUserPage"
              Title="Пользователи">
     <StackLayout>
-        <Button Text="Добавить" Clicked="Button_Clicked" />
+        <StackLayout Orientation="Horizontal" Margin="10,20" HorizontalOptions="Center">
+            <Button CornerRadius="10" HorizontalOptions="Center" WidthRequest="300" Text="Добавить" FontSize="13" Clicked="Button_Clicked" />
+        </StackLayout>
         <ListView x:Name="userlist" ItemsSource="{Binding}" ItemSelected="userlist_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <ViewCell.View>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Login}" FontSize="10" Grid.Column="0" />
-                                <Label Text="{Binding Password}" FontSize="10" Grid.Column="1" />
-                                <Label Text="{Binding Password}" FontSize="10" Grid.Column="1" />
-                            </Grid>
-                        </ViewCell.View>
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Login}" FontSize="16" Grid.Column="0" VerticalOptions="Center" />
+                            <Label Text="{Binding Password}" FontSize="16" Grid.Column="1" VerticalOptions="Center" />
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <ListView.Footer>
+                <StackLayout HeightRequest="3" BackgroundColor="#CCCCCC" />
+            </ListView.Footer>
         </ListView>
     </StackLayout>
 </ContentPage>
