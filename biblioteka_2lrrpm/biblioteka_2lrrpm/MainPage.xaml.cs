@@ -7,6 +7,7 @@ namespace biblioteka_2lrrpm
     {
         public char theme;
 
+        public MainPage(char theme)
         public MainPage()
         {
             InitializeComponent();
@@ -75,7 +76,7 @@ namespace biblioteka_2lrrpm
             }
             if (Pick.SelectedIndex == 0)
             {
-                Menu page = new Menu();
+                Menu page = new Menu(theme);
                 await Navigation.PushAsync(page);
             }
             if (Pick.SelectedIndex == 1)
