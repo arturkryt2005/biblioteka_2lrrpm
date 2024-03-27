@@ -25,9 +25,9 @@
             <Entry x:Name="textEditor" Placeholder="Автор" PlaceholderColor="Black" TextColor="Black"/>
         </Frame>
 
-        <Button Text="Сохранить" HeightRequest="60" CornerRadius="10" Margin="10 10 35 10" Clicked="Save" FontSize="18" TextTransform="None"/>
+        <Button Text="Сохранить" HeightRequest="60" CornerRadius="10" Margin="10, 10, 35, 10" Clicked="Save" FontSize="18" TextTransform="None"/>
 
-        <Button HorizontalOptions="Center" CornerRadius="10" WidthRequest="150" Margin="0 0 70 0" Text="Назад" FontSize="13" Clicked="Ex"/>
+        <Button HorizontalOptions="Center" CornerRadius="10" WidthRequest="150" Margin="0, 0, 70, 0" Text="Назад" FontSize="13" Clicked="Ex"/>
     </StackLayout>
     
 </ContentPage>

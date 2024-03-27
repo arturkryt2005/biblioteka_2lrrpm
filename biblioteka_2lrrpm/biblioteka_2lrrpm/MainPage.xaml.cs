@@ -65,12 +65,20 @@ namespace biblioteka_2lrrpm
                     BirthDatePicker.Date = minDate;
                 }
             }
+
+
             private async void Button_Clicked(object sender, EventArgs e)
             {
                 string login = Log.Text;
                 string password = Pas.Text;
 
-                this.LoginWalk = login;
+            if (login != "artur" || password != "bakasov")
+            {
+                await DisplayAlert("Ошибка", "Неправильный логин или пароль", "OK");
+                return;
+            }
+
+            this.LoginWalk = login;
                 this.PassWalk = password;
 
                 if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
