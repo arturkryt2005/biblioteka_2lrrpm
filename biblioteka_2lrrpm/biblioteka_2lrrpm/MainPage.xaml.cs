@@ -8,6 +8,7 @@ namespace biblioteka_2lrrpm
         public char theme;
 
         public MainPage(char theme)
+
         public MainPage()
         {
             InitializeComponent();
@@ -34,11 +35,12 @@ namespace biblioteka_2lrrpm
             if (currentColor == Color.Black)
             {
                 this.BackgroundColor = Color.Pink;
-                
+                theme = 'w';
             }
             else
             {
                 this.BackgroundColor = Color.Black;
+                theme = 'b';
             }
         }
 
