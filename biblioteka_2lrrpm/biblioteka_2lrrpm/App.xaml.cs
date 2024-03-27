@@ -6,11 +6,15 @@ namespace biblioteka_2lrrpm
 {
     public partial class App : Application
     {
-        public App()
+        public char theme;
+
+        public App(char theme)
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            this.theme = theme;
+
+            MainPage = new NavigationPage(new MainPage(theme));
         }
 
         protected override void OnStart()

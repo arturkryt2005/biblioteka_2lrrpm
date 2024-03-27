@@ -1,22 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 
 namespace biblioteka_2lrrpm
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Profile : ContentPage
     {
-        public Profile()
+        public char theme;
+
+        public Profile(char theme)
         {
             InitializeComponent();
+
+            this.theme = theme;
+
+            if (theme == 'w')
+            {
+                this.BackgroundColor = Color.Pink;
+            }
+            else if (theme == 'b')
+            {
+                this.BackgroundColor = Color.Black;
+            }
         }
 
         async void GetPhotoAsync(object sender, EventArgs e)
@@ -62,7 +70,7 @@ namespace biblioteka_2lrrpm
         }
         async void Ex(object sender, EventArgs e)
         {
-            MainPage page = new MainPage();
+            MainPage page = new MainPage(theme);
             await Navigation.PushAsync(page);
         }
     }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,8 +7,10 @@ namespace biblioteka_2lrrpm
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UserBooks : ContentPage
     {
+        public char theme;
+
         protected internal ObservableCollection<Book> Books { get; set; }
-        public UserBooks()
+        public UserBooks(char theme)
         {
             InitializeComponent();
             Books = new ObservableCollection<Book>
@@ -23,6 +19,17 @@ namespace biblioteka_2lrrpm
                 new Book {Name="Крокодил Гена и его друзья", Author="Эдуард Успенский", Genre="Фикшн"}
             };
             booklist.BindingContext = Books;
+
+            this.theme = theme;
+
+            if (theme == 'w')
+            {
+                this.BackgroundColor = Color.Pink;
+            }
+            else if (theme == 'b')
+            {
+                this.BackgroundColor = Color.Black;
+            }
         }
 
         private async void booklist_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -31,7 +38,7 @@ namespace biblioteka_2lrrpm
             if (selectedBook != null)
             {
                 booklist.SelectedItem = null;
-                await Navigation.PushAsync(new Book1());
+                await Navigation.PushAsync(new Book1(theme));
             }
         }
     }
