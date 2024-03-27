@@ -11,7 +11,6 @@
 
             <StackLayout Orientation="Horizontal" Margin="10,0">
                 <Button CornerRadius="10" HorizontalOptions="StartAndExpand" Text="Выход" FontSize="13" Clicked="Ex"/>
-                <Button CornerRadius="10" HorizontalOptions="EndAndExpand" Text="Тема" Clicked="OnThemeToggleClicked2"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

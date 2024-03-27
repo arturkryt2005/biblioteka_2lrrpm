@@ -11,11 +11,25 @@ namespace biblioteka_2lrrpm
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UserPage : ContentPage
     {
+        public char theme;
+
         bool edited = true; // флаг редактирования
         public User User { get; set; }
-        public UserPage(User user)
+        public UserPage(User user, char theme)
         {
             InitializeComponent();
+
+            this.theme = theme;
+
+            if (theme == 'w')
+            {
+                this.BackgroundColor = Color.Pink;
+            }
+            else if (theme == 'b')
+            {
+                this.BackgroundColor = Color.Black;
+            }
+
             User = user;
             if (user == null)
             {

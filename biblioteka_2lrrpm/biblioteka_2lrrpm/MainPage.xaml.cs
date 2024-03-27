@@ -7,18 +7,11 @@ namespace biblioteka_2lrrpm
     {
         public char theme;
 
-        public MainPage()
+        public MainPage(char theme)
         {
             InitializeComponent();
 
-            if (theme == 'w')
-            {
-                this.BackgroundColor = Color.Pink;
-            }
-            else if (theme == 'b')
-            {
-                this.BackgroundColor = Color.Black;
-            }
+            this.theme = theme;
         }
         private void OnRoleSelectedIndexChanged(object sender, EventArgs e)
         {
@@ -33,11 +26,12 @@ namespace biblioteka_2lrrpm
             if (currentColor == Color.Black)
             {
                 this.BackgroundColor = Color.Pink;
-                
+                this.theme = 'w';
             }
             else
             {
                 this.BackgroundColor = Color.Black;
+                this.theme = 'b';
             }
         }
 
@@ -75,7 +69,7 @@ namespace biblioteka_2lrrpm
             }
             if (Pick.SelectedIndex == 0)
             {
-                Menu page = new Menu();
+                Menu page = new Menu(theme);
                 await Navigation.PushAsync(page);
             }
             if (Pick.SelectedIndex == 1)

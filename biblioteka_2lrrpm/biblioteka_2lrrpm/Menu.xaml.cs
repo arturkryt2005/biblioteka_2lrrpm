@@ -7,11 +7,22 @@ namespace biblioteka_2lrrpm
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Menu : ContentPage 
     {
+        public char theme;
+
         public Menu(char theme)
         {
+            InitializeComponent();
+
             this.theme = theme;
 
-            InitializeComponent();
+            if (theme == 'w')
+            {
+                this.BackgroundColor = Color.Pink;
+            }
+            else if (theme == 'b')
+            {
+                this.BackgroundColor = Color.Black;
+            }
         }
 
         private async void Button_Clicked(object sender, EventArgs e)

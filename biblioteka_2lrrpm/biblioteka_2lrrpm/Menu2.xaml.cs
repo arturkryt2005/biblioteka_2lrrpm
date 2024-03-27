@@ -25,21 +25,6 @@ namespace biblioteka_2lrrpm
             }
         }
 
-        private void OnThemeToggleClicked2(object sender, EventArgs e)
-        {
-            Color currentColor = this.BackgroundColor;
-
-            if (currentColor == Color.Black)
-            {
-                this.BackgroundColor = Color.Pink;
-
-            }
-            else
-            {
-                this.BackgroundColor = Color.Black;
-            }
-        }
-
         private async void Button_Clicked(object sender, EventArgs e)
         {
             MainUserPage user = new MainUserPage(theme);

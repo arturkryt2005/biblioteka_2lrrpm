@@ -41,13 +41,13 @@ namespace biblioteka_2lrrpm
                 // Снимаем выделение
                 userlist.SelectedItem = null;
                 // Переходим на страницу редактирования элемента 
-                await Navigation.PushAsync(new UserPage(selectedUser));
+                await Navigation.PushAsync(new UserPage(selectedUser, theme));
             }
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new UserPage(null));
+            await Navigation.PushAsync(new UserPage(null, theme));
         }
         protected internal void AddUser(User user)
         {
