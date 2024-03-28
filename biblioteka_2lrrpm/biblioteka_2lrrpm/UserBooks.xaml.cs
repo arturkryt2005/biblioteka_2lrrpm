@@ -18,7 +18,7 @@ namespace biblioteka_2lrrpm
                 new Book {Name="Приключения Тома Сойера", Author="Марк Твен", Genre="Роман"},
                 new Book {Name="Крокодил Гена и его друзья", Author="Эдуард Успенский", Genre="Фикшн"}
             };
-            booklist.BindingContext = Books;
+            this.BindingContext = Books;
 
             this.theme = theme;
 
@@ -37,7 +37,6 @@ namespace biblioteka_2lrrpm
             Book selectedBook = e.SelectedItem as Book;
             if (selectedBook != null)
             {
-                booklist.SelectedItem = null;
                 await Navigation.PushAsync(new Book1(theme));
             }
         }

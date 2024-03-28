@@ -49,24 +49,6 @@ namespace biblioteka_2lrrpm
                 SelectedDateLabel.Text = $"Выбранная дата: {selectedDate.ToString("dd/MM/yyyy")}";
             }
 
-            private void OnSecondBirthDateSelected(object sender, DateChangedEventArgs e)
-            {
-                DateTime selectedDate = e.NewDate;
-                DateTime currentDate = DateTime.Now;
-                DateTime minDate = currentDate.AddYears(-100);
-
-                if (selectedDate > minDate || selectedDate > DateTime.Now)
-                {
-                    SelectedDateLabel.Text = $"Выбранная дата: {selectedDate.ToString("dd/MM/yyyy")}";
-                }
-                else
-                {
-                    DisplayAlert("Ошибка", "Введите корректную дату", "OK");
-                    BirthDatePicker.Date = minDate;
-                }
-            }
-
-
             private async void Button_Clicked(object sender, EventArgs e)
             {
                 string login = Log.Text;

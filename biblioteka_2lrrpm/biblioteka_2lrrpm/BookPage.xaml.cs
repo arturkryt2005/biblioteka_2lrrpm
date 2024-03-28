@@ -14,7 +14,7 @@ namespace biblioteka_2lrrpm
     {
         public char theme;
 
-        bool edited = true; // флаг редактирования
+        bool edited = true; 
         public Book Book { get; set; }
         public BookPage(Book book, char theme)
         {
@@ -46,15 +46,11 @@ namespace biblioteka_2lrrpm
             {
                 await Navigation.PopAsync();
 
-                // если добавление
                 if (edited == false)
                 {
-                    // находим в стеке предпоследнюю страницу - то есть MainPage
                     NavigationPage navPage = (NavigationPage)Application.Current.MainPage;
                     IReadOnlyList<Page> navStack = navPage.Navigation.NavigationStack;
                     MainBookPage homePage = navStack[navPage.Navigation.NavigationStack.Count - 1] as MainBookPage;
-
-                    
                 }
             }
             else

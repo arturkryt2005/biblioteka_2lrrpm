@@ -13,7 +13,7 @@
 
         <Label Text="Выберите дату" x:Name="DateLabel" HorizontalOptions="Center"/>
         <Frame CornerRadius="10" BorderColor="Black" Padding="0" BackgroundColor="White" Margin="10" WidthRequest="150" HorizontalOptions="Center">
-            <DatePicker x:Name="BirthDatePicker" DateSelected="OnSecondBirthDateSelected" HorizontalOptions="Center"/>
+            <DatePicker x:Name="BirthDatePicker" DateSelected="OnBirthDateSelected" HorizontalOptions="Center" MaximumDate="3/28/2024" MinimumDate="1/01/1924"/>
         </Frame>
         <Label x:Name="SelectedDateLabel" Text="" Margin="10" HorizontalOptions="Center"/>
 

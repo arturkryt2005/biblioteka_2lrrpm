@@ -38,9 +38,7 @@ namespace biblioteka_2lrrpm
             User selectedUser = e.SelectedItem as User;
             if (selectedUser != null)
             {
-                // Снимаем выделение
                 userlist.SelectedItem = null;
-                // Переходим на страницу редактирования элемента 
                 await Navigation.PushAsync(new UserPage(selectedUser));
             }
         }
